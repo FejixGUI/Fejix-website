@@ -1,0 +1,8 @@
+baseURL = 'https://fejix.dev'
+languageCode = 'en-us'
+title = 'Fejix website'
+theme = 'bootstrap'
+
+enableEmoji = true
+
+# Bootstrap theme docs: https://hbs.razonyang.com/en/docs/configuration/

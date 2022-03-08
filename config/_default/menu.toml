@@ -1,0 +1,19 @@
+# Menu
+
+[[main]]
+name = 'Posts'
+identifier = 'menu-posts'
+url = '/posts'
+weight = 1
+
+[[main]]
+name = 'Tutorial'
+identifier = 'menu-tutorial'
+url = '/tutorial'
+weight = 2
+
+[[main]]
+name = 'Docs'
+identifier = 'menu-docs'
+url = '/docs'
+weight = 3

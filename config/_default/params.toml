@@ -1,0 +1,5 @@
+mainSections = ['tutorial', 'posts', 'docs']
+copyright = false
+comment = true
+toc = true
+readingTime = false
