@@ -14,16 +14,22 @@ You can downlaod the Hugo binary for your platform from the [binary releases pag
 git clone https://github.com/FejixGUI/Fejix-website --depth 1 --shallow-submodules
 ```
 
-3. Build
-
-Just build:
+3. Build locally
 
 ```bash
 hugo
 ```
 
-Develop:
+Or, run at localhost:
 
 ```bash
 hugo serve
+```
+
+4. Or deploy on GitHub Pages
+
+> This step does not require the step **3** to be done.
+
+```bash
+./deploy.sh
 ```
