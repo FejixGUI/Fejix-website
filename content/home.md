@@ -1,9 +1,9 @@
 +++
-#layout = 'posts'
 title = 'Welcome page'
 url = '/'
 comment = true
 postDate = false
+toc = false
 +++
 
 Hi :wink:! This is the official website of the Fejix project!
@@ -39,6 +39,8 @@ You may ask why using GUIML if everything is converted into XX anyway. The wrong
 
 Some of the frameworks don't have semantically correct definition of widget elements.
 A pink rectangle with rounded corners of radius 3 pixels? Why? Whyy?! I know that my computer can draw whatever I want, but the pink rectangle appears to be a button! That's not right. Rectangles can't have content. One of the goals of Fejix is to fix that.
+
+Anyway, there's definitely dothing bad in yet another GUI framework. 
 
 ## Looking for a logo :eyes:
 

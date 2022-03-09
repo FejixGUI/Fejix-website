@@ -2,11 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fejix.dev/categories/</loc>
+    <loc>https://fejix.dev/tutorials/fjml/</loc>
+  </url><url>
+    <loc>https://fejix.dev/tutorials/fjml/getting-started/</loc>
   </url><url>
     <loc>https://fejix.dev/</loc>
+    <lastmod>2022-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fejix.dev/posts/first-post/</loc>
+    <lastmod>2022-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fejix.dev/posts/</loc>
+    <lastmod>2022-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fejix.dev/categories/</loc>
+  </url><url>
+    <loc>https://fejix.dev/docs/</loc>
+  </url><url>
+    <loc>https://fejix.dev/docs/group-1/element-1/</loc>
+  </url><url>
+    <loc>https://fejix.dev/docs/</loc>
   </url><url>
     <loc>https://fejix.dev/tags/</loc>
+  </url><url>
+    <loc>https://fejix.dev/tutorials/</loc>
   </url><url>
     <loc>https://fejix.dev/</loc>
   </url>
