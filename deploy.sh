@@ -1,7 +1,7 @@
 DIR=generated_website
 
 # Generate the site
-hugo -d $DIR
+hugo
 
 git add *
 

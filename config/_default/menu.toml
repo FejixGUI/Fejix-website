@@ -1,19 +1,25 @@
 # Menu
 
 [[main]]
+name = 'Home'
+identifier = 'menu-home'
+url = '/'
+weight = 1
+
+[[main]]
 name = 'Posts'
 identifier = 'menu-posts'
 url = '/posts'
-weight = 1
+weight = 2
 
 [[main]]
 name = 'Tutorials'
 identifier = 'menu-tutorial'
 url = '/tutorials'
-weight = 2
+weight = 3
 
 [[main]]
 name = 'Docs'
 identifier = 'menu-docs'
 url = '/docs'
-weight = 3
+weight = 4

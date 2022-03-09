@@ -1,5 +1,5 @@
 +++
-title = 'Welcome page'
+title = 'Home page'
 url = '/'
 comment = true
 postDate = false
