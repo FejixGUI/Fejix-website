@@ -13,7 +13,7 @@ Hi :wink:! This is the official website of the Fejix project!
 Fejix is a cross-platform GUI framework designed for compilable programming languages.
 
 It is still in early stage of development.
-Don't expect see a breathtaking demo, simply because it doesn't even exist :worried:.
+Don't expect to see a breathtaking demo, simply because it doesn't even exist :worried:.
 
 But I can already tell you the concept:
 
@@ -40,7 +40,9 @@ You may ask why using GUIML if everything is converted into XX anyway. The wrong
 Some of the frameworks don't have semantically correct definition of widget elements.
 A pink rectangle with rounded corners of radius 3 pixels? Why? Whyy?! I know that my computer can draw whatever I want, but the pink rectangle appears to be a button! That's not right. Rectangles can't have content. One of the goals of Fejix is to fix that.
 
-Anyway, there's definitely dothing bad in yet another GUI framework. 
+Anyway, there's definitely nothing bad in yet another GUI framework. 
+
+GUIML in case of Fejix is called Fejix Markup Language or FjML
 
 ## Looking for a logo :eyes:
 
