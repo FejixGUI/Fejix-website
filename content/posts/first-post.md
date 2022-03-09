@@ -1,9 +1,8 @@
 +++
-copyright = false
-layout ='post'
 title = 'I created a website for Fejix'
 date = 2022-03-08
-description = 'Some notes about this webite and Fejix'
+description = 'Some notes about this webite and Fejix.'
+summary = 'Why I created this website and how I came up with the Fejix name.'
 +++
 
 # Hello world!

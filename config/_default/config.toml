@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Fejix website'
 theme = 'bootstrap'
 
+
+# Output directory
+publishDir = 'generated_website'
+
 enableEmoji = true
 
 # Bootstrap theme docs: https://hbs.razonyang.com/en/docs/configuration/
