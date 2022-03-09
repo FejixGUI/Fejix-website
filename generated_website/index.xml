@@ -5,35 +5,18 @@
     <link>https://fejix.dev/</link>
     <description>Recent content on Fejix website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fejix.dev/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://fejix.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>I created a website for Fejix</title>
-      <link>https://fejix.dev/posts/first-post/</link>
-      <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://fejix.dev/posts/first-post/</guid>
-      <description>Hello world!I have been developing the idea of Fejix since August 2021 and finally decided that there are far too many ideas to store them in a handful of GitHub repos. Everything should be kept in one place and look nice.
-I&amp;rsquo;ve recently created a GitHub organisation called FejixGUI to dump everything dedicated to Fejix there. And all links at this site will bring you there. I used the name &amp;lsquo;FejixGUI&amp;rsquo; because &amp;lsquo;Fejix&amp;rsquo; was already taken.</description>
-    </item>
-    
-    <item>
-      <title>Element 1</title>
-      <link>https://fejix.dev/docs/group-1/element-1/</link>
+      <title>Welcome page</title>
+      <link>https://fejix.dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fejix.dev/docs/group-1/element-1/</guid>
-      <description>To be developped&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://fejix.dev/tutorial/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fejix.dev/tutorial/</guid>
-      <description>FjML tutorialThis will potentially be an FjML tutorial.
-FjML is Fejix Markup Language.</description>
+      <guid>https://fejix.dev/</guid>
+      <description>Hi 😉! This is the official website of the Fejix project!
+What is Fejix?Fejix is a cross-platform GUI framework designed for compilable programming languages.
+It is still in early stage of development. Don&amp;rsquo;t expect see a breathtaking demo, simply because it doesn&amp;rsquo;t even exist 😟.
+But I can already tell you the concept:
+Let&amp;rsquo;s assume you&amp;rsquo;re using a programming language XX. It can be C, C++, Rust, Haskell, D, etc.</description>
     </item>
     
   </channel>
