@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Fejix website</title>
-    <link>https://fejix.dev/posts/</link>
+    <link>https://fejix.dev/blog/</link>
     <description>Recent content in Posts on Fejix website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fejix.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fejix.dev/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>I created a website for Fejix</title>
+      <title>I created a website for my project</title>
       <link>https://fejix.dev/posts/first-post/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
       

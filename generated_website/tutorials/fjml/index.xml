@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://fejix.dev/tutorials/fjml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>First project</title>
+      <link>https://fejix.dev/tutorials/fjml/first-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fejix.dev/tutorials/fjml/first-project/</guid>
+      <description>How to create your first project</description>
+    </item>
+    
+    <item>
       <title>Getting started</title>
       <link>https://fejix.dev/tutorials/fjml/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fejix.dev/tutorials/fjml/getting-started/</guid>
-      <description>How to install FjML compiler and create your first project</description>
+      <description>How to install FjML compiler</description>
     </item>
     
   </channel>

@@ -9,12 +9,12 @@
 <link rel="icon" href="https://fejix.dev/images/icons/favicon.ico">
 <link rel="manifest" href="https://fejix.dev/manifest.json">
 <meta name="keywords" content="" />
-<meta name="description" content="How to install FjML compiler and create your first project" /><meta itemprop="name" content="Getting started">
-<meta itemprop="description" content="How to install FjML compiler and create your first project">
+<meta name="description" content="How to install FjML compiler" /><meta itemprop="name" content="Getting started">
+<meta itemprop="description" content="How to install FjML compiler">
 
-<meta itemprop="wordCount" content="15">
+<meta itemprop="wordCount" content="235">
 <meta itemprop="keywords" content="" /><meta property="og:title" content="Getting started" />
-<meta property="og:description" content="How to install FjML compiler and create your first project" />
+<meta property="og:description" content="How to install FjML compiler" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fejix.dev/tutorials/fjml/getting-started/" /><meta property="article:section" content="tutorials" />
 
@@ -22,7 +22,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Getting started"/>
-<meta name="twitter:description" content="How to install FjML compiler and create your first project"/>
+<meta name="twitter:description" content="How to install FjML compiler"/>
 <meta property="og:image" content="https://fejix.dev/images/logo.png"/>
   <meta name="twitter:image" content="https://fejix.dev/images/logo.png"/><link rel="stylesheet" href="https://fejix.dev/css/main.min.507afbe6e4670fa3e961a0b35816b5daeb36029866fd6bd7b9d7871fcf88faa5.css" integrity="sha256-UHr75uRnD6PpYaCzWBa12us2Aphm/WvXudeHH8&#43;I&#43;qU=" crossorigin="anonymous"><link rel="stylesheet" href="https://fejix.dev/css/viewer.min.3d228794bcedbbfa0412beb8fbc1ec6973202945e42af7004f742a4d7bd620ab.css" integrity="sha256-PSKHlLztu/oEEr64&#43;8HsaXMgKUXkKvcAT3QqTXvWIKs=" crossorigin="anonymous"></head>
   <body><script>const items=["mode","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs-"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="navbar top-app-bar top-app-bar-expand-lg fixed-top">
@@ -136,19 +136,14 @@ Fejix website
 </div>
 
     <div class="collapse navbar-collapse" tabindex="-1" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
-      <form class="search-bar my-1" action="https://fejix.dev/search">
-  <div class="input-group input-group-sm">
-    <span class="btn btn-search disabled position-absolute left-0"><i class="fas fa-fw fa-search"></i></span>
-    <input class="form-control rounded-pill" name="q" type="search" aria-label="Search">
-  </div>
-</form>
+      
       <ul class="navbar-nav ms-auto"><li class="nav-item">
           <a class="nav-link" href="https://fejix.dev/">
             Home
           </a>
         </li><li class="nav-item">
-          <a class="nav-link" href="https://fejix.dev/posts">
-            Posts
+          <a class="nav-link" href="https://fejix.dev/blog">
+            Blog
           </a>
         </li><li class="nav-item">
           <a class="nav-link" href="https://fejix.dev/tutorials">
@@ -183,6 +178,8 @@ Fejix website
             <ul class="btn-toggle-nav list-unstyled fw-normal ms-2">
               <ul class="list-unstyled mb-2"><li class="mb-2 active text-accent" tabindex="-1">
           <a href="https://fejix.dev/tutorials/fjml/getting-started/">Getting started</a>
+        </li><li class="mb-2" tabindex="-1">
+          <a href="https://fejix.dev/tutorials/fjml/first-project/">First project</a>
         </li></ul>
             </ul>
           </div>
@@ -212,7 +209,9 @@ Fejix website
     <a class="action" href="#post-comments" role="button" aria-label="Comments" title="Comments">
   <i class="fas fa-fw fa-comments"></i>
 </a>
-    
+    <a class="action d-lg-none" href="#postTOC" aria-controls="Table of contents" role="button" title="Table of contents">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
     
   </div>
 </div>
@@ -224,12 +223,50 @@ Fejix website
 <div class="card-body"><div class="post-meta"><span class="post-taxonomies"></span>
 </div>
 <div class="post-content mb-3"><p><strong>F</strong>e<strong>j</strong>ix <strong>M</strong>arkup <strong>L</strong>anguage (FjML) is the language used to define GUI.</p>
+<p>It is (will be) an extensible alternative to HTML, SCSS and, partially, JavaScript.</p>
 <h2 id="installation">Installation<a class="anchor ms-1" href="#installation"><i class="fas fa-link"></i></a></h2>
-<blockquote>
-<p>To be written&hellip;</p>
-</blockquote>
+<ol start="0">
+<li>
+<p>Install <a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer">Cargo</a>, the Rust&rsquo;s package manager.</p>
+<p>As of now, Fjml compiler is too young to have binary releases, so the only way to get it is to build from source.</p>
+</li>
+<li>
+<p>Download the compiler&rsquo;s source code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/FejixGUI/Fejix-compiler
+</span></span></code></pre></div></li>
+<li>
+<p>Build &amp; install:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cargo install --path Fejix-compiler
+</span></span></code></pre></div><p>By default, the executable is installed to <code>~/.cargo/bin</code>. To install into another directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cargo install --path Fejix-compiler --root &lt;DESTINATION&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>Create environment variable <code>FEJIX_CONFIG</code> with the path to compiler&rsquo;s global configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;export FEJIX_CONFIG=</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span><span style="color:#e6db74">/Fejix-compiler/fejix_config.toml&#34;</span> &gt;&gt; ~/.bashrc
+</span></span></code></pre></div><p>The configuration file is <code>fejix_config.toml</code> in the source directory <code>Fejix-compiler</code>.</p>
+</li>
+<li>
+<p>Update your PATH:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div><p>Or, alternatively, reopen your shell.</p>
+</li>
+<li>
+<p>Test the installation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fjc --version
+</span></span></code></pre></div><p>If no &ldquo;fjc&rdquo; executable was found or you get an error saying that &ldquo;fejix_config.toml&rdquo; was not found, check the previous steps.</p>
+</li>
+</ol>
+<h2 id="compilers-configuration">Compiler&rsquo;s configuration<a class="anchor ms-1" href="#compilers-configuration"><i class="fas fa-link"></i></a></h2>
+<p>You do not <em>have</em> to define <code>FEJIX_CONFIG</code> variable. The compiler also searches <code>fejix_config.toml</code> in its CWD.</p>
+<p>If you wish to dump the compiler and its configuration file into one directory, also organise the important subdirectories located in the source directory, their names start with <code>fejix_</code>.
+<code>fejix_config.toml</code> contains their paths, by default set to <code>./fejix_&lt;name&gt;</code>, so you can either copy all the important directories to the destination place or modify <code>fejix_config.toml</code> to point to them.</p>
+<p>Cargo by default installs all executables to <code>~/.cargo/bin</code>.</p>
 </div></div>
-<div class="card-footer"></div>
+<div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-next">
+    <a href="https://fejix.dev/tutorials/fjml/first-project/">First project
+</a>
+    <i class="fas fa-fw fa-chevron-right"></i>
+  </div></div></div>
 </article><div class="card component row post-comments" id="post-comments">
   <div class="card-header">
     <h2 class="card-title">Comments</h2>
@@ -246,12 +283,26 @@ Fejix website
 </div><aside class="sidebar d-flex docs-sidebar col-lg-3 position-sticky">
   <div class="container">
     
-    
+    <div class="post-toc row mb-4 card component" id="postTOC">
+  <div class="card-header">
+    <h2 class="card-title">Contents</h2>
+  </div>
+  <div class="card-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#compilers-configuration">Compiler&rsquo;s configuration</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
     
   </div>
 </aside>
 </div>
-    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" target="_blank" href="https://github.com/FejixGUI" title="GitHub" rel="noopener noreferrer">
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav justify-content-center mb-2"><a class="nav-link social-link" href="mailto:lgd.mrk@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/FejixGUI" title="GitHub" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-github"></i>
       </a></nav>
 <div class="copyright mb-2">

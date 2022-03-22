@@ -8,16 +8,25 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fejix.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>First project</title>
+      <link>https://fejix.dev/tutorials/fjml/first-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fejix.dev/tutorials/fjml/first-project/</guid>
+      <description>How to create your first project</description>
+    </item>
+    
+    <item>
       <title>Getting started</title>
       <link>https://fejix.dev/tutorials/fjml/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fejix.dev/tutorials/fjml/getting-started/</guid>
-      <description>How to install FjML compiler and create your first project</description>
+      <description>How to install FjML compiler</description>
     </item>
     
     <item>
-      <title>I created a website for Fejix</title>
+      <title>I created a website for my project</title>
       <link>https://fejix.dev/posts/first-post/</link>
       <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
       
@@ -44,7 +53,7 @@
 What is Fejix?Fejix is a cross-platform GUI framework designed for compilable programming languages.
 It is still in early stage of development. Don&amp;rsquo;t expect to see a breathtaking demo, simply because it doesn&amp;rsquo;t even exist 😟.
 But I can already tell you the concept:
-Let&amp;rsquo;s assume you&amp;rsquo;re using a programming language XX. It can be C, C++, Rust, Haskell, D, etc.</description>
+In short: the essence of Fejix is that you can get optimized GUI by specifying it in a domain-specific language in a semantically correct way.</description>
     </item>
     
   </channel>

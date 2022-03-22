@@ -7,9 +7,9 @@ url = '/'
 weight = 1
 
 [[main]]
-name = 'Posts'
-identifier = 'menu-posts'
-url = '/posts'
+name = 'Blog'
+identifier = 'menu-blog'
+url = '/blog'
 weight = 2
 
 [[main]]

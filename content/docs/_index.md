@@ -1,9 +1,10 @@
 +++
 title = 'Documentation'
-type = 'docs'
+#type = 'docs'
 [cascade]
 layout = 'docs'
-type = 'docs'
+#type = 'docs'
 comment = false
-portDate = false
+postDate = false
+toc = true
 +++

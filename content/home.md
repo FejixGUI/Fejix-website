@@ -1,9 +1,8 @@
 +++
 title = 'Home page'
 url = '/'
-comment = true
+comment = false
 postDate = false
-toc = false
 +++
 
 Hi :wink:! This is the official website of the Fejix project!
@@ -16,6 +15,10 @@ It is still in early stage of development.
 Don't expect to see a breathtaking demo, simply because it doesn't even exist :worried:.
 
 But I can already tell you the concept:
+
+In short: the essence of Fejix is that you can get optimized GUI by specifying it in a domain-specific language in a semantically correct way.
+
+If you want something longer:
 
 Let's assume you're using a programming language XX. It can be C, C++, Rust, Haskell, D, etc.
 
@@ -37,8 +40,8 @@ So, in the final code everything is drawn by XX or C.
 
 You may ask why using GUIML if everything is converted into XX anyway. The wrong thing here is that we assume that XX is convenient for working with GUI while it really isn't. Maybe, memory management is OK in XX. But managing its dynamic state is a lot more complicated. 
 
-Some of the frameworks don't have semantically correct definition of widget elements.
-A pink rectangle with rounded corners of radius 3 pixels? Why? Whyy?! I know that my computer can draw whatever I want, but the pink rectangle appears to be a button! That's not right. Rectangles can't have content. One of the goals of Fejix is to fix that.
+Some of the frameworks don't allow semantic definition of widget elements.
+A pink rectangle with rounded corners of radius 3 pixels? Why? Whyy?! I know that my computer can draw whatever I want, but the pink rectangle appears to be a button! That's not right. Rectangles can't be clickable and they can't contain text. One of the goals of Fejix is to fix that.
 
 Anyway, there's definitely nothing bad in yet another GUI framework. 
 
