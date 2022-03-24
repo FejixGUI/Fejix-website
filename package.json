@@ -1,0 +1,19 @@
+{
+  "name": "fejix-website",
+  "version": "1.0.0",
+  "description": "The place where you can find everything you need about Fejix.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FejixGUI/Fejix-website.git"
+  },
+  "author": "Mark Lagodych",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/FejixGUI/Fejix-website/issues"
+  },
+  "homepage": "https://github.com/FejixGUI/Fejix-website#readme"
+}
