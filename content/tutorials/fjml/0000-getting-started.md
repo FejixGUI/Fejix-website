@@ -1,6 +1,6 @@
 +++
-title = 'Getting started'
-weight = 1000
+title = '1. Getting started'
+#weight = 1000
 summary = 'How to install FjML compiler'
 toc = true
 +++
