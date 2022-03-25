@@ -2,10 +2,10 @@ html {
     --dark-background: #333;
     --light-background: #454545;
     --dark-shadow: #222;
-    --main-color: #ddd;
+    --main-color: #eee;
     --highlight: white;
     --accent: #e4b32f;
-    --accent-light: #f1dfad;
+    --accent-light: #f1d78f;
     --accent-transparent: #e4b32f11;
     
     font-family: Arial, Helvetica, sans-serif;
@@ -25,10 +25,16 @@ body {
     position: absolute;
     top: 5em; /* Height of the header */
     width: 100%;
-
+    
     margin: 0;
     padding: 0;
+    /* padding-bottom: 1em; for footer */
     min-height: calc(100vh - 5em); /* - height of header */
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 11em); /* I've no idea why 11em */
+    padding-bottom: 5em;
 }
 
 header {
@@ -39,7 +45,7 @@ header {
     
     display: inline-table;
     z-index: 2;
-
+    
     background-color: var(--light-background);   
     box-shadow: var(--dark-shadow) 0 .1em .1em;
 }
@@ -59,7 +65,8 @@ main {
     border-radius: 0.5em;
     overflow-x: auto;
     top: 0;
-    margin-bottom: 6em; /* for footer */
+    /* margin-bottom: 7em; for footer */
+    /* margin-bottom: auto; */
     
     background-color: var(--light-background);
 }
@@ -121,7 +128,7 @@ header, footer {
     padding: 0.2em;
     padding-bottom: 0;
     font-size: 1.4em;
-    color: var(--highlight);
+    color: var(--accent-light);
     /* border-bottom: 1px solid var(--main-color); */
 }
 
@@ -137,7 +144,7 @@ header, footer {
 }
 
 .project:hover th {
-    color: var(--accent-light);
+    color: var(--accent);
 }
 
 .project:hover td {

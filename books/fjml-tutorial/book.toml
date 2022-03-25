@@ -1,0 +1,13 @@
+[book]
+title = "FjML Tutorial"
+authors = ["MarkLagodych"]
+description = "Fejix Markup Language tutorial and Fejix basics explanations"
+src = "src"
+language = "en"
+multilingual = false
+
+[output.html]
+git-repository-url = "https://github.com/FejixGUI/tree/main/books/fjml-tutorial"
+
+[output.html.fold]
+enable = true
