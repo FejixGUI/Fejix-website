@@ -1,3 +1,6 @@
 # Summary
 
-- [Chapter 1](./chapter_1.md)
+- [Introduction](./introduction.md)
+- [Installation](./installation.md)
+- [Syntax](./syntax/README.md)
+    - [Primitives](./syntax/primitives.md)
