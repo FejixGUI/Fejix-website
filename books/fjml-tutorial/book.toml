@@ -7,7 +7,8 @@ language = "en"
 multilingual = false
 
 [output.html]
-git-repository-url = "https://github.com/FejixGUI/tree/main/books/fjml-tutorial"
+git-repository-url = "https://github.com/FejixGUI/Fejix-website/tree/main/books/fjml-tutorial"
+additional-js = ["fjml.min.js"]
 
 [output.html.fold]
 enable = true

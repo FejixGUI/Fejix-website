@@ -5,7 +5,7 @@ html {
     --main-color: #eee;
     --highlight: white;
     --accent: #e4b32f;
-    --accent-light: #f1d78f;
+    /* --accent-light: #f1d78f; */
     --accent-transparent: #e4b32f11;
     
     font-family: Arial, Helvetica, sans-serif;
@@ -128,7 +128,7 @@ header, footer {
     padding: 0.2em;
     padding-bottom: 0;
     font-size: 1.4em;
-    color: var(--accent-light);
+    color: var(--accent);
     /* border-bottom: 1px solid var(--main-color); */
 }
 
@@ -144,7 +144,7 @@ header, footer {
 }
 
 .project:hover th {
-    color: var(--accent);
+    color: var(--main-color);
 }
 
 .project:hover td {

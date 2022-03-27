@@ -1,1 +1,39 @@
 # Installation
+
+0. Install [Cargo](https://www.rust-lang.org/tools/install), the Rust's package manager.
+   
+    As of now, Fjml compiler is too young to have binary releases, so the only way to get it is to build from source.
+
+1. Define where to install Fejix standard library and compiler's configuration:
+   
+   ```sh
+   export FEJIX_CONFIG_PATH=~/.fejix
+   ```
+
+   The next step will only install the compiler without the necessary configuration unless `FEJIX_CONFIG_PATH` is defined.
+
+   The variable is needed only for the next step and can be deleted afterwards.
+
+2. Install Fjml compiler:
+    ```sh
+    cargo install fejix-compiler
+    ```
+
+3. Create an environment variable that contains the path to `fejix_config.toml` that has been downloaded:
+
+   ```sh
+   echo "export FEJIX_CONFIG=$FEJIX_CONFIG_PATH/fejix_config.toml" >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+   In Windows you can do that using the build-in program for modifying env.
+
+   The variable tells the compiler where to find its configuration.
+
+4. Check the installation:
+
+   ```sh
+   fjc --version
+   ```
+
+   This should output the version of the compiler.

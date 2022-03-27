@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - FjML Tutorial</title>
+        <title>Creating a project - FjML Tutorial</title>
 
 
         <!-- Custom HTML head -->
@@ -79,7 +79,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item "><a href="creating-project.html"><strong aria-hidden="true">3.</strong> Creating a project</a></li><li class="chapter-item "><a href="syntax/index.html"><strong aria-hidden="true">4.</strong> Syntax</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="syntax/primitives.html"><strong aria-hidden="true">4.1.</strong> Primitives</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="creating-project.html" class="active"><strong aria-hidden="true">3.</strong> Creating a project</a></li><li class="chapter-item "><a href="syntax/index.html"><strong aria-hidden="true">4.</strong> Syntax</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="syntax/primitives.html"><strong aria-hidden="true">4.1.</strong> Primitives</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,23 +148,46 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>This is how Fejix works:</p>
-<ol>
-<li>You write a few Fjml files that describe your UI.</li>
-<li>You write your main code that interacts with UI.</li>
-<li>You compile Fjml and your main code.</li>
-<li>You get a working GUI app.</li>
-</ol>
-<p>This tutorial will teach you Fjml, how it works, how to write, compile and use it.</p>
-<p>This is not a tutorial about how to program nor about how to use terminals, Git, Cargo etc.</p>
+                        <h1 id="creating-a-project"><a class="header" href="#creating-a-project">Creating a project</a></h1>
+<p>In short:</p>
+<pre><code class="language-sh">mkdir my-first-fjml-project
+cd my-first-fjml-project
+touch fejix.toml
+mkdir src/ui
+touch src/ui/ui.fj
+</code></pre>
+<p>This will create the following structure:</p>
+<pre><code>my-first-project/
+    
+    fejix.toml
+
+    src/
+        ui/
+            ui.fj
+</code></pre>
+<p><code>fejix.toml</code> is your Fjml project configuration file.</p>
+<p><code>ui.fj</code> is the main UI file.</p>
+<h3 id="contents-of-fejixtoml"><a class="header" href="#contents-of-fejixtoml">Contents of <code>fejix.toml</code></a></h3>
+<pre><code class="language-toml">[project]
+name = &quot;my-first-project&quot;
+version = &quot;0.0.1&quot;
+source = &quot;src/ui&quot;
+</code></pre>
+<p><code>source</code> is the path to the directory that contains all of your <code>.fj</code> files.</p>
+<h3 id="contents-of-uifj"><a class="header" href="#contents-of-uifj">Contents of <code>ui.fj</code></a></h3>
+<pre><code class="language-fjml">Window
+    .title &quot;Hello world!&quot;
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next" href="installation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="syntax/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -174,8 +197,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next" href="installation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="syntax/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

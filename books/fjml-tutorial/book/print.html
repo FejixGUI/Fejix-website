@@ -80,7 +80,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item "><a href="syntax/index.html"><strong aria-hidden="true">3.</strong> Syntax</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="syntax/primitives.html"><strong aria-hidden="true">3.1.</strong> Primitives</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item "><a href="creating-project.html"><strong aria-hidden="true">3.</strong> Creating a project</a></li><li class="chapter-item "><a href="syntax/index.html"><strong aria-hidden="true">4.</strong> Syntax</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="syntax/primitives.html"><strong aria-hidden="true">4.1.</strong> Primitives</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -115,10 +115,11 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/FejixGUI/tree/main/books/fjml-tutorial" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/FejixGUI/Fejix-website/tree/main/books/fjml-tutorial" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
+                        <!-- MODIFIED -->
                         <a href="../../../index.html" title="Back to home" aria-label="Back to home">
                             <i class="fa fa-home"></i>
                         </a>
@@ -149,9 +150,186 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>This is how Fejix works:</p>
+<ol>
+<li>You write a few Fjml files that describe your UI.</li>
+<li>You write your main code that interacts with UI.</li>
+<li>You compile Fjml and your main code.</li>
+<li>You get a working GUI app.</li>
+</ol>
+<p>This tutorial will teach you Fjml, how it works, how to write, compile and use it.</p>
+<p>This is not a tutorial about how to program nor about how to use terminals, Git, Cargo etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<ol start="0">
+<li>
+<p>Install <a href="https://www.rust-lang.org/tools/install">Cargo</a>, the Rust's package manager.</p>
+<p>As of now, Fjml compiler is too young to have binary releases, so the only way to get it is to build from source.</p>
+</li>
+<li>
+<p>Define where to install Fejix standard library and compiler's configuration:</p>
+<pre><code class="language-sh">export FEJIX_CONFIG_PATH=~/.fejix
+</code></pre>
+<p>The next step will only install the compiler without the necessary configuration unless <code>FEJIX_CONFIG_PATH</code> is defined.</p>
+<p>The variable is needed only for the next step and can be deleted afterwards.</p>
+</li>
+<li>
+<p>Install Fjml compiler:</p>
+<pre><code class="language-sh">cargo install fejix-compiler
+</code></pre>
+</li>
+<li>
+<p>Create an environment variable that contains the path to <code>fejix_config.toml</code> that has been downloaded:</p>
+<pre><code class="language-sh">echo &quot;export FEJIX_CONFIG=$FEJIX_CONFIG_PATH/fejix_config.toml&quot; &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre>
+<p>In Windows you can do that using the build-in program for modifying env.</p>
+<p>The variable tells the compiler where to find its configuration.</p>
+</li>
+<li>
+<p>Check the installation:</p>
+<pre><code class="language-sh">fjc --version
+</code></pre>
+<p>This should output the version of the compiler.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-a-project"><a class="header" href="#creating-a-project">Creating a project</a></h1>
+<p>In short:</p>
+<pre><code class="language-sh">mkdir my-first-fjml-project
+cd my-first-fjml-project
+touch fejix.toml
+mkdir src/ui
+touch src/ui/ui.fj
+</code></pre>
+<p>This will create the following structure:</p>
+<pre><code>my-first-project/
+    
+    fejix.toml
+
+    src/
+        ui/
+            ui.fj
+</code></pre>
+<p><code>fejix.toml</code> is your Fjml project configuration file.</p>
+<p><code>ui.fj</code> is the main UI file.</p>
+<h3 id="contents-of-fejixtoml"><a class="header" href="#contents-of-fejixtoml">Contents of <code>fejix.toml</code></a></h3>
+<pre><code class="language-toml">[project]
+name = &quot;my-first-project&quot;
+version = &quot;0.0.1&quot;
+source = &quot;src/ui&quot;
+</code></pre>
+<p><code>source</code> is the path to the directory that contains all of your <code>.fj</code> files.</p>
+<h3 id="contents-of-uifj"><a class="header" href="#contents-of-uifj">Contents of <code>ui.fj</code></a></h3>
+<pre><code class="language-fjml">Window
+    .title &quot;Hello world!&quot;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><p>This block will teach you the syntax of Fjml.</p>
+<p>The code given to you won't do anything useful and you don't have to write it.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="primitives"><a class="header" href="#primitives">Primitives</a></h1>
+<p>Fjml is mostly a declarative language.</p>
+<p>This means that we mostly <em>declare</em> stuff but we do not <em>operate</em> on it.</p>
+<pre><code class="language-fjml">// This is a comment.
+
+// I did not find it useful to implement multi-line comments.
+
+
+// DECLARATIONS
+
+
+// This is a declaration of a number
+a: Num 123 
+// Syntax:
+// NAME : TYPE [VALUE]
+
+// No value -&gt; defaults to 0
+b: Num
+
+// Other formats
+c: Num 3.1415e-10 // Floating-point
+d: Num 0b00101001 // binary
+e: Num 0xDEADBEEF // hexadecimal
+
+// Beware!
+f: Num -1  // OK
+g: Num - 1 // Error!
+
+// This is a declaration of a string
+str_a: Str &quot;Hello, world!&quot;
+
+// Defaults to &quot;&quot;, empty string
+str_b: Str
+
+str_c: Str &quot;Strings
+can
+span
+many
+lines&quot;
+
+str_d: Str 'You can use single quotes'
+
+str_e: Str `You can use backticks`
+
+str_f: Str '
+    You can insert special sequences that
+    will be replaced with corresponding characters:
+    \n -- line return
+    \' -- single quote
+    \&quot; -- double quote
+    \u1234 -- Unicode character 0x1234
+    \U12345678 -- Unicode character 0x12345678
+    \\ -- back slash
+    \/ -- forward slash
+    \0 -- does not insert any characters
+    Other characters prefixed by \ are inserted as-is:
+    \a\b\c -&gt; abc
+'
+
+// The \0 sequence is funny. I thought it can be useful...
+str_g: Str &quot;\0\0\0\0\0\0\0\0\0\0&quot; // This string is empty!
+
+// Strings with backticks do NOT replace \-sequences
+str_h: Str `\n\n\n` // -&gt; &quot;\\n\\n\\n&quot;
+
+
+// COLORS
+
+// #RRGGBB
+p_a: Color #f97801 // Hex number
+// #RGB
+p_b: Color #123 // -&gt; #112233
+// #X, gray colors
+p_c: Color #8 // -&gt; #888888
+
+// With alpha channels:
+// #AARRGGBB
+p_d: Color #10f97801
+// # ARGB
+p_e: Color #1234 // -&gt;  #11223344
+// #AX
+p_f: Color #12 // -&gt; #11222222
+
+// Color names
+p_g: Color ##red
+p_h: Color ##lightseablue
+
+
+// SPECIFICATIONS
+
+
+// You may sometimes want to modify
+// the things you declared previously.
+// This can be done by _specification_
+// of the declared values
+
+a: Num 123
+
+.a 321 // Now a is 321
+// Syntax:
+// . NAME VALUE
+
+// You cannot change the type in specifications
+b: Str &quot;123&quot;
+.b 123 // -&gt; ERROR
+</code></pre>
 
                     </main>
 
@@ -184,9 +362,14 @@
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- MODIFIED -->
+        <script src="fjml.min.js" type="text/javascript" charset="utf-8"></script>
+
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        <script type="text/javascript" src="fjml.min.js"></script>
 
         <script type="text/javascript">
         window.addEventListener('load', function() {
