@@ -100,7 +100,7 @@ header, footer {
 }
 
 @media screen and (min-width: 60em) {
-    header, footer {
+    footer {
         padding: 0 15%;
     }
 }

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Creating a project - FjML Tutorial</title>
+        <title>Annotations - FjML Tutorial</title>
 
 
         <!-- Custom HTML head -->
@@ -13,21 +13,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -35,7 +35,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -79,7 +79,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="creating-project.html" class="active"><strong aria-hidden="true">3.</strong> Creating a project</a></li><li class="chapter-item "><a href="syntax/index.html"><strong aria-hidden="true">4.</strong> Syntax</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="syntax/primitives.html"><strong aria-hidden="true">4.1.</strong> Primitive types</a></li><li class="chapter-item "><a href="syntax/constructed.html"><strong aria-hidden="true">4.2.</strong> Constructed types</a></li><li class="chapter-item "><a href="syntax/annotations.html"><strong aria-hidden="true">4.3.</strong> Annotations</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item "><a href="../installation.html"><strong aria-hidden="true">2.</strong> Installation</a></li><li class="chapter-item "><a href="../creating-project.html"><strong aria-hidden="true">3.</strong> Creating a project</a></li><li class="chapter-item expanded "><a href="../syntax/index.html"><strong aria-hidden="true">4.</strong> Syntax</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../syntax/primitives.html"><strong aria-hidden="true">4.1.</strong> Primitive types</a></li><li class="chapter-item "><a href="../syntax/constructed.html"><strong aria-hidden="true">4.2.</strong> Constructed types</a></li><li class="chapter-item expanded "><a href="../syntax/annotations.html" class="active"><strong aria-hidden="true">4.3.</strong> Annotations</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -111,7 +111,7 @@
                     <h1 class="menu-title">FjML Tutorial</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/FejixGUI/Fejix-website/tree/main/books/fjml-tutorial" title="Git repository" aria-label="Git repository">
@@ -119,7 +119,7 @@
                         </a>
 
                         <!-- MODIFIED -->
-                        <a href="../../../index.html" title="Back to home" aria-label="Back to home">
+                        <a href="../../../../index.html" title="Back to home" aria-label="Back to home">
                             <i class="fa fa-home"></i>
                         </a>
 
@@ -148,48 +148,115 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="creating-a-project"><a class="header" href="#creating-a-project">Creating a project</a></h1>
-<p>In short:</p>
-<pre><code class="language-sh">mkdir my-first-fjml-project
-cd my-first-fjml-project
-touch fejix.toml
-mkdir src/ui
-touch src/ui/ui.fj
-</code></pre>
-<p>This will create the following structure:</p>
-<pre><code>my-first-project/
-    
-    fejix.toml
+                        <h1 id="annotations"><a class="header" href="#annotations">Annotations</a></h1>
+<p>Fjml currently has only one keyword - <code>type</code> and we do not need more.</p>
+<p>How is that possible? - you may ask. We have annotations!</p>
+<p>Annotations are pieces of information that can be attached to structures.</p>
+<pre><code class="language-fjml">@my_pretty_annotation
+some_number: Num -1234
+// some_number is annotated
 
-    src/
-        ui/
-            ui.fj
-</code></pre>
-<p><code>fejix.toml</code> is your Fjml project configuration file.</p>
-<p><code>ui.fj</code> is the main UI file.</p>
-<h3 id="contents-of-fejixtoml"><a class="header" href="#contents-of-fejixtoml">Contents of <code>fejix.toml</code></a></h3>
-<pre><code class="language-toml">[project]
-name = &quot;my-first-project&quot;
-version = &quot;0.0.1&quot;
-source = &quot;src/ui&quot;
-</code></pre>
-<p><code>source</code> is the path to the directory that contains all of your <code>.fj</code> files.</p>
-<h3 id="contents-of-uifj"><a class="header" href="#contents-of-uifj">Contents of <code>ui.fj</code></a></h3>
-<pre><code class="language-fjml">Window
-    .title &quot;Hello world!&quot;
+
+// We put annotations on separate lines
+// just for readability. But it is not necessary:
+@anno1 @anno2 @anno3 something: Str
+
+// Annotations can have arguments:
+@annotation_with_arguments(1, &quot;Str&quot;, ##teal)
+some_number: Num -1234
+
+// Annotations can include spaces and line breaks
+@ my_nice_annotations (
+    1,
+    2,
+    'three', // &lt;- the last , is OK but not mandatory
+)
+x: Num
+
+// We can annotate almost any values except
+// when they are parts of expressions
+
+@annotate_specification
+.a 123
+
+@annotate_block {
+    // ...
+}
+
+my_num: Num  @annotate_value 123
+
+@annotate_type
+SomeType: type
+    @annotate_field
+    some_field: SomeOtherType
+
+@annotate_this
+.object
+    @annotate_that
+    .sub_object
+        @and_also_this
+        .property  @and_of_cource_its_value 3
+
+// BUT the following code is ILLEGAL
+my_number: @anno Num // &lt;- Num is a part of expression
+
+
+
+// BUILT-IN ANNOTATIONS
+
+// Some annotations can help us make our code
+// much more powerful
+
+// ------------ @FINAL --------------
+@final x: Num 3.14159265
+// x is *final* and cannot be modified
+.x 3 // &lt;- ERROR
+// This makes some things safer
+
+// ------------ @DERIVE -------------
+// @derive allows type inheritence
+
+A: type
+    x: Num 123
+
+@derive(A)
+B: type
+    y: Str &quot;Hello!&quot;
+
+b: B // Has 'x' and 'y'
+
+// You can derive multiple types:
+// @derive(A, B, C)
+
+// ------------- @CLASS -------------
+// @class sets type classes which prevent
+// types of different classes to be derived together
+
+@class('my.class.A')
+A: type
+
+@class('my.class.B')
+B: type
+
+@derive(A, B) // &lt;- ERROR
+C: type
+
+// This is how to give a name to your class:
+// ORGANISATION.PROJECT.FILE.CLASS
+// Example:
+// fejix.stdlib.core.window
+// This ensures that class names do not collide
+
 </code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../syntax/constructed.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="syntax/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -197,13 +264,10 @@ source = &quot;src/ui&quot;
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../syntax/constructed.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="syntax/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
@@ -216,20 +280,20 @@ source = &quot;src/ui&quot;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- MODIFIED -->
-        <script src="fjml.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../fjml.min.js" type="text/javascript" charset="utf-8"></script>
 
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript" src="fjml.min.js"></script>
+        <script type="text/javascript" src="../fjml.min.js"></script>
 
 
     </body>
