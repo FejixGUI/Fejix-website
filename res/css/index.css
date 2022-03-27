@@ -45,6 +45,7 @@ header {
     
     display: inline-table;
     z-index: 2;
+    box-sizing: border-box;
     
     background-color: var(--light-background);   
     box-shadow: var(--dark-shadow) 0 .1em .1em;
