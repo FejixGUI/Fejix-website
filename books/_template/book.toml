@@ -1,0 +1,3 @@
+
+[output.html]
+additional-js = ["fjml.min.js"]

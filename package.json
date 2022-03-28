@@ -4,7 +4,8 @@
   "description": "The place where you can find everything you need about Fejix.",
   "main": "index.html",
   "scripts": {
-    "build-books": "bash ./build-books.sh"
+    "build-books": "bash ./tools/build-books.sh",
+    "new-book": "bash ./tools/new-book.sh"
   },
   "repository": {
     "type": "git",
