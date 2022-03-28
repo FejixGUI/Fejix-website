@@ -158,8 +158,8 @@
 <p>Define where to install Fejix standard library and compiler's configuration:</p>
 <pre><code class="language-sh">export FEJIX_CONFIG_PATH=~/.fejix
 </code></pre>
-<p>The next step will only install the compiler without the necessary configuration unless <code>FEJIX_CONFIG_PATH</code> is defined.</p>
-<p>The variable is needed only for the next step and can be deleted afterwards.</p>
+<p>The next step will fail unless <code>FEJIX_CONFIG_PATH</code> is defined.</p>
+<p>The variable is needed only for the next two steps and can be deleted afterwards.</p>
 </li>
 <li>
 <p>Install Fjml compiler:</p>
@@ -171,7 +171,10 @@
 <pre><code class="language-sh">echo &quot;export FEJIX_CONFIG=$FEJIX_CONFIG_PATH/fejix_config.toml&quot; &gt;&gt; ~/.bashrc
 source ~/.bashrc
 </code></pre>
-<p>In Windows you can do that using the build-in program for modifying env.</p>
+<p>In Windows you can do that through Settings.</p>
+<p>Shortcut (using Win+R):</p>
+<pre><code>rundll32.exe sysdm.cpl,EditEnvironmentVariables
+</code></pre>
 <p>The variable tells the compiler where to find its configuration.</p>
 </li>
 <li>

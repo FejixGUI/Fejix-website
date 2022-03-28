@@ -2,4 +2,10 @@
 
 Creating websites is tedious...
 
-I decided that this website will only be a front page the will link to news/docs/tutorials.
+I decided that this website will only consist of one front page that links to news/docs/tutorials.
+
+To build tutorials (Markdown -> HTML):
+
+```sh
+npm run build-books
+```

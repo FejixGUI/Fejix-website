@@ -4,7 +4,7 @@
   "description": "The place where you can find everything you need about Fejix.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-books": "bash ./build-books.sh"
   },
   "repository": {
     "type": "git",

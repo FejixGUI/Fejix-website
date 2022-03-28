@@ -10,9 +10,9 @@
    export FEJIX_CONFIG_PATH=~/.fejix
    ```
 
-   The next step will only install the compiler without the necessary configuration unless `FEJIX_CONFIG_PATH` is defined.
+   The next step will fail unless `FEJIX_CONFIG_PATH` is defined.
 
-   The variable is needed only for the next step and can be deleted afterwards.
+   The variable is needed only for the next two steps and can be deleted afterwards.
 
 2. Install Fjml compiler:
     ```sh
@@ -26,7 +26,12 @@
    source ~/.bashrc
    ```
 
-   In Windows you can do that using the build-in program for modifying env.
+   In Windows you can do that through Settings.
+
+   Shortcut (using Win+R):
+   ```
+   rundll32.exe sysdm.cpl,EditEnvironmentVariables
+   ```
 
    The variable tells the compiler where to find its configuration.
 
