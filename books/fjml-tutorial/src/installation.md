@@ -10,7 +10,7 @@
    export FEJIX_CONFIG_PATH=~/.fejix
    ```
 
-   The next step will fail unless `FEJIX_CONFIG_PATH` is defined.
+   This is recommended, but not necessary if you already have the stdlib and config installed.
 
    The variable is needed only for the next two steps and can be deleted afterwards.
 
